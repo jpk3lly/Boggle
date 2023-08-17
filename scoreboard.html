@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scoreboard.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <title>High Scores</title>
 </head>
+
 <body>
-    <div class="container">
+    <nav class="nav justify-content-end">
+        <div>
+            <h3 class="navbar-brand">BOGGLE</h3>
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" aria-current="page" href="game.html">Play</a>
+                </div>
+        </div>
+    </nav>
+    <div class="container text-center">
         <div id="boggleHighScores" class="top-score-table">
-            <h1 id="finalScore">High Scores</h1>
-            <table>
+            <h1 id="finalScore" class="display-1">High Scores</h1>
+            <table class="container text-center table table-striped table-hover">
                 <thead>
-                    <td class="score-header">Name</td>
-                    <td class="score-header">Words Found</td>
-                    <td class="score-header">Score</td>
+                    <td class="display-6">Name</td>
+                    <td class="display-6">Words Found</td>
+                    <td class="display-6">Score</td>
                 </thead>
-            <tbody id="boggleHighScoresList"></tbody>
+                <tbody id="boggleHighScoresList"></tbody>
             </table>
-            <a href="/" class="btn">BACK TO MENU</a>
+            <a href="/" class="btn btn-light">BACK TO MENU</a>
         </div>
     </div>
 </body>
 <script src="scoreboard.js"></script>
+
 </html>

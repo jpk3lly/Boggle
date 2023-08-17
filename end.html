@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <title>Document</title>
 </head>
-<body>
-    <h1>GAME OVER</h1>
+<body class="container text-center">
+    <h1 class="display-1">GAME OVER</h1>
 
     <h1 id="score"></h1>
     <div class="submitted-answers">
-        <h3>Your Score</h3>
-        <div id="final-score" class="final-score"></div>
-        <div id="words-found" class="words-found">Words Found</div>
+        <h3  class="display-6">Your Score</h3>
+        <div id="final-score" class="display-6"></div>
+        <div id="words-found" class="display-6">Words Found</div>
 
-        <form action="">
-            <input type="text" name="username" id="username" placeholder="Enter Name"></input>
-            <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
+        <form action="" class="input-group">
+            <input type="text" name="username" id="username" class="form-control" placeholder="Enter Name"></input>
+            <button type="submit" class="btn btn-light btn-lg" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
         </form>
     </div>
     <h1 id="answer"></h1>
     <div class="submitted-answers">
-    <h3>Submitted Answers</h3>
+    <h3 class="display-6">Submitted Answers</h3>
     <div id="accepted-answers" class="accepted-Answers"></div>
     </div>
 
-    <button id="play-again-btn" class="play-again-btn">Play Again</button>
-    <button id="scoreboard-btn" class="scoreboard-btn">Score Board</button>
+    <button id="play-again-btn" class="btn btn-lg btn-light">Play Again</button>
+    <button id="scoreboard-btn" class="btn btn-lg btn-light">Score Board</button>
 
 </body>
 <script src="end.js"></script>
