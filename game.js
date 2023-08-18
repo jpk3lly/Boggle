@@ -105,6 +105,7 @@ clearAnswer = () => {
         letterBlock.classList.add('btn-outline-secondary');
         answerWindow.classList.remove('text-bg-danger');
         answerWindow.classList.remove('text-bg-success');
+        answerWindow.classList.remove('text-bg-warning');
         });
     selectedWord = '';
     answerWindow.innerText = selectedWord;
