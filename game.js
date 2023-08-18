@@ -1,6 +1,6 @@
 /* CONSTANTS & VARIABLES */ 
 
-const letterBlocks = Array.from(document.getElementsByClassName('btn btn-outline-secondary'));
+const letterBlocks = Array.from(document.getElementsByClassName('answer-btn'));
 const answerWindow = document.getElementById('answer');
 const acceptedAnswers = document.getElementById('accepted-answers');
 const submitButton = document.getElementById('submit-btn');
@@ -54,11 +54,11 @@ updateScore = () => {
 userAnswer = () => {
     letterBlocks.forEach( letterBlock  => {
         letterBlock.addEventListener("click", e => {
-            if(letterBlock.classList.contains('btn-success')){
-                letterBlock.classList.add('btn-warning')
+            if(letterBlock.classList.contains('answer-btn-selected')){
+                letterBlock.classList.add('selected-already')
                 console.log(letterBlock.classList)
                 setTimeout( () => {
-                    letterBlock.classList.remove('btn-warning');
+                    letterBlock.classList.remove('selected-already');
                 }, 500);            
             }
             else{
@@ -66,8 +66,8 @@ userAnswer = () => {
             let selectedLetter = selectedChoice.innerText;
             selectedWord = selectedWord + selectedLetter;
             answerWindow.innerText = selectedWord;
-            letterBlock.classList.remove('btn-outline-secondary')
-            letterBlock.classList.add('btn-success')
+            letterBlock.classList.remove('answer-btn')
+            letterBlock.classList.add('answer-btn-selected')
             }
         });
     });
@@ -80,8 +80,8 @@ submitAnswer = () => {
 
     submitButton.addEventListener("click", e => { 
         letterBlocks.forEach( letterBlock  => {
-            letterBlock.classList.remove('btn-success')
-            letterBlock.classList.add('btn-outline-secondary')
+            letterBlock.classList.remove('answer-btn-selected')
+            letterBlock.classList.add('answer-btn')
         });
         validateWord();
     });
@@ -101,11 +101,11 @@ resetButton();
 
 clearAnswer = () => {
     letterBlocks.forEach( letterBlock  => {
-        letterBlock.classList.remove('btn-success');
-        letterBlock.classList.add('btn-outline-secondary');
-        answerWindow.classList.remove('text-bg-danger');
-        answerWindow.classList.remove('text-bg-success');
-        answerWindow.classList.remove('text-bg-warning');
+        letterBlock.classList.remove('answer-btn-selected');
+        letterBlock.classList.add('answer-btn');
+        answerWindow.classList.remove('wrong-answer');
+        answerWindow.classList.remove('right-answer');
+        answerWindow.classList.remove('same-answer');
         });
     selectedWord = '';
     answerWindow.innerText = selectedWord;
@@ -132,9 +132,9 @@ validateWord = () => {
             answerDefinition.innerText = `${data[0].meanings[0].definitions[0].definition}`;
             submittedAnswers.push(selectedWord); 
             acceptedAnswers.innerHTML = submittedAnswers.map(answer => {                    
-                return `<li class="list-group-item">${answer}</li>`
+                return `<li class="submitted-answers">${answer}</li>`
             }).join("");
-            answerWindow.classList.add('text-bg-success')
+            answerWindow.classList.add('right-answer')
             answerWindow.innerText = selectedWord;
             individualWordScore();
             setTimeout( () => {
@@ -145,7 +145,7 @@ validateWord = () => {
 }
 
 notAWord = () =>{
-    answerWindow.classList.add('text-bg-danger')
+    answerWindow.classList.add('wrong-answer')
     answerWindow.innerText = 'Not A Word!!';
     setTimeout( () => {
         clearAnswer();
@@ -153,7 +153,7 @@ notAWord = () =>{
 }
 
 alreadyUsedWord = () =>{
-        answerWindow.classList.add('text-bg-warning')
+        answerWindow.classList.add('same-answer')
         answerWindow.innerText = 'Had that one already!!';
         setTimeout( () => {
             clearAnswer();

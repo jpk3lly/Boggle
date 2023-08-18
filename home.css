@@ -1,7 +1,6 @@
 /**{
     //background-color: #3C3C3C;
 }*/
-
 html,
 body {
     width: 100%;
@@ -14,10 +13,40 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.nav{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: #000;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.nav-title{
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: middle;
+}
+
+.nav-item{
+  list-style: none;
+  vertical-align: middle;
+}
+
+.nav-wording{
+  text-decoration: none;
+  color: whitesmoke;
+  vertical-align: middle;
+}
+
+
 .btn{
   max-width:300px;
   display: flex;
-  flex-direction:column;
   text-align: center;
 }
 

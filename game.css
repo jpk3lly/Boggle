@@ -166,6 +166,10 @@ h1{
     color: green;
 }
 
+.same-answer {
+    color: orange;
+}
+
 .page-header {
     background-color: whitesmoke;
     display: flex;
