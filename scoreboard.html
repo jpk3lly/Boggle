@@ -4,28 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="scoreboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
     <title>High Scores</title>
 </head>
 
 <body>
-    <nav class="nav justify-content-end">
-        <div>
-            <h3 class="navbar-brand">BOGGLE</h3>
-                <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                    <a class="nav-link" aria-current="page" href="game.html">Play</a>
-                </div>
-        </div>
-    </nav>
     <div class="container text-center">
         <div id="boggleHighScores" class="top-score-table">
-            <h1 id="finalScore" class="display-1">High Scores</h1>
-            <table class="container text-center table table-striped table-hover">
+            <h1 id="finalScore" class="score-header">HIGH SCORES</h1>
+            <table class="">
                 <thead>
-                    <td class="display-6">Name</td>
-                    <td class="display-6">Words Found</td>
-                    <td class="display-6">Score</td>
+                    <td class="scoreboard-titles">Name</td>
+                    <td class="scoreboard-titles">Words Found</td>
+                    <td class="scoreboard-titles">Score</td>
                 </thead>
                 <tbody id="boggleHighScoresList"></tbody>
             </table>

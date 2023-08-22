@@ -10,9 +10,15 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Montserrat;
+    font-size: 12pt;
 }
 
+h1{
+  font-family:Lilita One;
+  font-size: 4rem;
+  text-align: center;
+}
 .nav{
   display: flex;
   flex-direction: row;
@@ -43,15 +49,17 @@ body {
   vertical-align: middle;
 }
 
-
-.btn{
-  max-width:300px;
+.navigation-buttons{
   display: flex;
-  text-align: center;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
-.action-btn{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.btn{
+  text-align: center;
+  font-family: Montserrat;
   font-size: 2rem;
   border: 0.1rem solid;
   margin: 0.5rem;
@@ -59,12 +67,11 @@ body {
   text-decoration: none;
   background-color: whitesmoke;
   height:3rem;
-  width: 50%;
-  text-align: center;
   vertical-align: middle;
+  width: 30%
 }
 
-.action-btn:hover{
+.btn:hover{
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
   transform: translateY(-0.1rem);

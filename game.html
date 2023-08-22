@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="bootstrap.min.css">-->
     <link rel="stylesheet" href="game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
+
     <title>Document</title>
 </head>
 
@@ -15,12 +21,14 @@
             <h3 id="score-header" class="score-header">Score</h3>
             <div id="score-view" class="score-view">0</div>
         </div>
-        <h1>BOGGLE</h1>
+
         <div class="countdown-timer">
             <h3 id="timer-header" class="timer-header">Time Remaining</h3>
             <div id="timer" class="timer"></div>
         </div>
     </nav>
+
+    <h1>BOGGLE</h1>
 
     <container class="outer-container">
         <div class="inner-container">
@@ -57,27 +65,24 @@
                 <button id="submit-btn" class="submit-btn">SUBMIT</button>
                 <button id="clear-btn" class="clear-btn">CLEAR</button>
             </div>
+            <container>
 
-            <container >
+                <container>
+                    <div>
+                        <div class="card">
+                            <h5 id="answer" class="current-answer"></h5>
+                            <p id="answer-definition" class="answers"></p>
+                        </div>
+                    </div>
+                </container>
+
                 <div class="card">
                     <h3 class="answers">Submitted Answers</h3>
                     <div id="accepted-answers" class="accepted-answers"></div>
                 </div>
-        </container>
+            </container>
         </div>
     </container>
-    <container>
-        <div>
-            <div class="card">
-                <h5 id="answer" class="card-title"></h5>
-                <p id="answer-definition" class="card-text"></p>
-            </div>
-        </div>
-    </container>
-
-
-
-
 
 </body>
 <script src="game.js"></script>

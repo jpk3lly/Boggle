@@ -2,47 +2,53 @@
     //background-color: #3C3C3C;
 }*/
 
-h1{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 3rem;
+html,
+body {
     width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family:Montserrat;
+    font-size: 12pt;
+}
+
+h1{
+    font-family:Lilita One;
+    font-size: 4rem;
     text-align: center;
 }
 
 .outer-container{
     display: flex;
-    flex-flow: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-content: center;
+
 }
 
 .inner-container{
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
 }
 
 .table-block{
-    max-width: 300px;
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: baseline;
+    max-width: 350px;
     border-top: 0.1rem solid;
     border-right: 0.2rem solid;
     border-bottom: 0.2rem solid;
     border-left: 0.05rem solid;
     border-radius: 12px;
-    background-color:coral
+    background-color:rgba(238, 106, 18, 0.6);
 }
+
 .action-buttons{
-    max-width:300px;
     display: flex;
     flex-direction:row;
     text-align: center;
+    vertical-align: middle;
     justify-content: space-between;
 }
 
 .answer-btn{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     font-size: 2rem;
     background-color: whitesmoke;
     border-top: 0.1rem solid;
@@ -74,13 +80,12 @@ h1{
 }
 
 .submit-btn{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem;
     border: 0.1rem solid;
     margin: 0.5rem;
     border-radius: 0.2rem;
     text-decoration: none;
-    background-color: aquamarine;
+    background-color: rgba(127, 255, 212, 0.5);
     height:3rem;
     width: 50%;
     text-align: center;
@@ -89,13 +94,12 @@ h1{
 }
 
 .clear-btn{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem;
     border: 0.1rem solid;
     margin: 0.5rem;
     border-radius: 0.2rem;
     text-decoration: none;
-    background-color:rgb(247, 95, 90);
+    background-color:rgb(247, 95, 90, 0.5);
     height:3rem;
     width: 50%;
     text-align: center;
@@ -118,7 +122,6 @@ h1{
 }
 
 .answer-btn-selected{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem;
     border: 0.1rem solid;
     padding: 0.5rem;
@@ -139,10 +142,12 @@ h1{
     background-color: rgb(255, 112, 112);
 }
 
+.current-answer{
+    font-size: 2.5rem;
+}
+
 .submitted-answers{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: 0.1rem solid;
-    font-size: 1rem;
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 0.2rem;
@@ -171,50 +176,46 @@ h1{
 }
 
 .page-header {
-    background-color: whitesmoke;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     font-size: 1rem;
-    border: 0.1rem solid;
     padding: 0.5rem;
     margin: 0.5rem;
-    border-radius: 0.2rem;
 }
 
-#timer-header,
-#score-header,
-h3 {
-    background-color: whitesmoke;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1rem;
+.countdown-timer{
+    vertical-align: middle;
+    text-align: center;
 }
 
-.countdown-timer,
+.timer{
+    vertical-align: middle;
+    font-size: 1.5rem;
+    border: 0.1rem solid;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width:40px;
+}
+
 .current-score {
-    background-color: whitesmoke;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    font-size: 1.5rem;
-    max-width: 300px;
-    width: 50%;
-    flex-direction: column;
-    text-align: center;
     vertical-align: middle;
 }
 
-.timer,
 .score-view {
-    background-color: whitesmoke;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
-    max-width: 300px;
-    width: 100%;
     text-align: center;
     vertical-align: middle;
-    overflow: auto;
-    text-align: center;
-    vertical-align: middle;
+    border: 0.1rem solid;
+    padding: 0.5rem;
+    border-radius: 50%;
 }
 
+.input-name{
+    font-size: 1.5rem;
+    border: 0.1rem solid;
+    border-radius: 0.2rem;
+    height: 3rem;
+    vertical-align: middle;
+}
