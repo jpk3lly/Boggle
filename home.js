@@ -1,18 +1,18 @@
-const newGameBtn = document.getElementById('new-game');
-const scoreboardBtn = document.getElementById('scoreboard');
+const newGameBtn = document.getElementById('play-boggle');
+const scoreboardBtn = document.getElementById('use-calculator');
 
-newGame = () => {
+playBoggle = () => {
     newGameBtn.addEventListener("click", e => {
         console.log(e); 
-        window.location.assign('game.html');
+        window.location.assign('boggle.html');
     });
 }
 
-scoreBoard = () => {
+useCalculator = () => {
     scoreboardBtn.addEventListener("click", e => { 
-        window.location.assign('scoreboard.html');
+        window.location.assign('calculator.html');
     });
 }
 
-newGame();
-scoreBoard();
+playBoggle();
+useCalculator();
