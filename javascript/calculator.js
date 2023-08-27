@@ -7,6 +7,7 @@ const clearButton = document.getElementById('clear-btn');
 const answerWindow = document.getElementById('answer-window');
 const calculationWindow = document.getElementById('calculation-window');
 const acceptedAnswers = document.getElementById('accepted-answers');
+const homeButton = document.getElementById('home');
 
 
 let currentNumber;
@@ -113,6 +114,14 @@ resetButton = () => {
 
 resetButton();
 
+goHome = () => {
+    homeButton.addEventListener("click", e => {
+        console.log(e);
+        window.location.assign('index.html');
+    });
+}
+
+goHome();
 
 // TODO - SORT THE STYLING ON THE ANSWER WINDOW SO IT LOOKS LIKE 1 WINDOW
 // TODO - SORT THE STYLING IN GENERAL

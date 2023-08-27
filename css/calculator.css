@@ -7,17 +7,18 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    font-family:Montserrat;
+    font-family: Montserrat;
     font-size: 12pt;
 }
 
-h1{
-    font-family:Lilita One;
-    font-size: 4rem;
-    text-align: center;
+h1 {
+    font-family: Lilita One;
+    font-size: 1.5rem;
+    text-align: right;
+    padding-right: 0.5rem;
 }
 
-.outer-container{
+.outer-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -25,29 +26,38 @@ h1{
 
 }
 
-.inner-container{
+.inner-container {
     text-align: center;
 }
 
-.table-block{
+.table-block {
     max-width: 350px;
     border-top: 0.1rem solid;
     border-right: 0.2rem solid;
     border-bottom: 0.2rem solid;
     border-left: 0.05rem solid;
     border-radius: 12px;
-    background-color:rgba(186, 249, 253, 0.6);
+    background-color: whitesmoke;
 }
 
-.action-buttons{
+.action-buttons {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     text-align: center;
     vertical-align: middle;
     justify-content: space-between;
 }
 
-.answer-btn{
+
+
+.answer-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.btn {
 
     font-size: 2rem;
     background-color: whitesmoke;
@@ -59,92 +69,88 @@ h1{
     margin: 0.5rem;
     border-radius: 0.5rem;
     text-decoration: none;
-    height:3rem;
+    height: 3rem;
     width: 3rem;
     text-align: center;
     vertical-align: middle;
 }
 
-.answer-btn:hover{
+.btn:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
 
-.btn{
-
-    font-size: 2rem;
-    background-color: whitesmoke;
-    border-top: 0.1rem solid;
-    border-right: 0.2rem solid;
-    border-bottom: 0.2rem solid;
-    border-left: 0.05rem solid;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    height:3rem;
-    width: 3rem;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.btn:hover{
+.btn:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
 
-.btn:hover{
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem rgba(86, 185, 235, 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
+.answer-btn {
+    background-color: white;
 }
 
-.submit-btn{
+.function-btn {
+    background-color: rgba(143, 182, 179, 0.3);
+}
+
+.submit-btn {
     background-color: rgba(127, 255, 212, 0.5);
     width: 40%;
 }
 
-.clear-btn{
-    background-color:rgb(247, 95, 90, 0.5);
+.clear-btn {
+    background-color: rgb(247, 95, 90, 0.5);
 }
 
-.answer-btn-selected{
+.answer-btn-selected {
     font-size: 2rem;
     border: 0.1rem solid;
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 0.2rem;
     text-decoration: none;
-    height:3rem;
+    height: 3rem;
     width: 3rem;
     text-align: center;
     vertical-align: middle;
     cursor: not-allowed;
     box-shadow: none;
+
     transform: none;
     background-color: rgb(185, 233, 185);
 }
 
-.selected-already{
+.selected-already {
     background-color: rgb(255, 112, 112);
 }
 
-.answer-window{
+.answer-window {
     border: 0.1rem solid;
     padding: 0.5rem;
     margin: 0.5rem;
     text-align: right;
-    border-radius: 0.3rem ;
+    border-radius: 0.3rem;
     font-size: 2.5rem;
     background-color: #fff;
 }
 
-.calculation-window{
+.nav-btn {
+    font-family: Montserrat;
+    font-size: 2rem;
+    border: 0.1rem solid;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    height: 3rem;
+    vertical-align: middle;
+    width: 40%
+}
+
+.calculation-window {
     font-size: 1rem;
 }
 
@@ -176,18 +182,18 @@ h1{
     margin: 0.5rem;
 }
 
-.countdown-timer{
+.countdown-timer {
     vertical-align: middle;
     text-align: center;
 }
 
-.timer{
+.timer {
     vertical-align: middle;
     font-size: 1.5rem;
     border: 0.1rem solid;
     padding: 0.5rem;
     border-radius: 50%;
-    width:40px;
+    width: 40px;
 }
 
 .current-score {
@@ -205,7 +211,7 @@ h1{
     border-radius: 50%;
 }
 
-.input-name{
+.input-name {
     font-size: 1.5rem;
     border: 0.1rem solid;
     border-radius: 0.2rem;

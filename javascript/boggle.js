@@ -1,5 +1,6 @@
 const newGameBtn = document.getElementById('new-game');
 const scoreboardBtn = document.getElementById('scoreboard');
+const homeButton = document.getElementById('home');
 
 newGame = () => {
     newGameBtn.addEventListener("click", e => {
@@ -14,5 +15,13 @@ scoreBoard = () => {
     });
 }
 
+goHome = () => {
+    homeButton.addEventListener("click", e => {
+        console.log(e);
+        window.location.assign('index.html');
+    });
+}
+
 newGame();
 scoreBoard();
+goHome();

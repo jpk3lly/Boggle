@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="css/calculator.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lilita+One&display=swap" rel="stylesheet">
@@ -24,15 +24,11 @@
                         <tr>
                             <h1>Calculator</h1>
                         </tr>
+                        <div class="answer-window">
+                            <p class="calculation-window" id="calculation-window">0</p>
+                                <p id="answer-window">0</p>
+                        </div>
                     </thead>
-                    <tbody class="answer-window">
-                        <tr>
-                            <td class="calculation-window" id="calculation-window">0</td>
-                        </tr>
-                        <tr>
-                            <td id="answer-window">0</td>
-                        </tr>
-                    </tbody>
                     <tbody>
                         <tr class="action-buttons">
                             <td class="btn clear-btn" id="clear-btn">AC</td>
@@ -67,8 +63,10 @@
                 </table>
             </div>
             <container>
-
+                <div class="navigation-buttons">
+                    <button id="home" class="btn nav-btn" href="index.html">Home</button>
+                </div>
 </body>
-<script src="calculator.js"></script>
+<script src="javascript/calculator.js"></script>
 
 </html>
