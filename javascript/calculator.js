@@ -2,6 +2,7 @@
 
 const buttons = Array.from(document.getElementsByClassName('answer-btn'));
 const functionButtons = Array.from(document.getElementsByClassName('function-btn'));
+const parenthesisButton = document.getElementById('parenthesis');
 const submitButton = document.getElementById('submit-btn');
 const clearButton = document.getElementById('clear-btn');
 const answerWindow = document.getElementById('answer-window');
@@ -29,10 +30,10 @@ userAnswer = () => {
         button.addEventListener('click', e => {
             const selectedDigit = e.target;
             let selectedNumber = selectedDigit.id;
-            if(currentNumber === undefined){
+            if (currentNumber === undefined) {
                 currentNumber = selectedNumber;
             }
-            else{
+            else {
                 currentNumber = currentNumber + selectedNumber;
             }
             answerWindow.innerText = currentNumber
@@ -41,6 +42,20 @@ userAnswer = () => {
 };
 
 userAnswer();
+
+brackets = () => {
+    parenthesisButton.addEventListener('click', e => {
+        if (currentNumber.length === 0) {
+            currentNumber = '(';
+        }
+        else {
+            currentNumber = ')';
+        }
+        answerWindow.innerText = currentNumber
+    });
+};
+
+brackets();
 
 userFunction = () => {
     functionButtons.forEach(functionButton => {
@@ -65,41 +80,41 @@ submitAnswer = () => {
 submitAnswer();
 
 calculateAnswer = () => {
-    if(currentFunction.id === '+'){
+    if (currentFunction.id === '+') {
         answer = Number(submittedNumbers) + Number(currentNumber)
         currentCalculation = `${submittedNumbers} ${currentFunction.id} ${currentNumber}`;
         submittedNumbers = currentNumber;
         currentNumber = answer;
     }
-    else if(currentFunction.id === '-'){
+    else if (currentFunction.id === '-') {
         answer = Number(submittedNumbers) - Number(currentNumber)
         currentCalculation = `${submittedNumbers} ${currentFunction.id} ${currentNumber}`;
         submittedNumbers = currentNumber;
         currentNumber = answer;
     }
-    else if(currentFunction.id === '*'){
+    else if (currentFunction.id === '*') {
         answer = Number(submittedNumbers) * Number(currentNumber)
         currentCalculation = `${submittedNumbers} ${currentFunction.id} ${currentNumber}`;
         submittedNumbers = currentNumber;
         currentNumber = answer;
     }
-    else if(currentFunction.id === '/'){
+    else if (currentFunction.id === '/') {
         answer = Number(submittedNumbers) / Number(currentNumber)
         currentCalculation = `${submittedNumbers} ${currentFunction.id} ${currentNumber}`;
         submittedNumbers = currentNumber;
         currentNumber = answer;
     }
     // TODO TRY TO FIGURE OUT HOW TO GET THE PERCENTAGE AND PARENTHESIS BUTTONS TO WORK.
-    /*
-        else if(currentFunction.id === '%'){
-        answer = answer * (1 / Number(currentNumber))
+
+    else if (currentFunction.id === '%') {
+        answer = answer * (Number(currentNumber) / 100)
         currentCalculation = `${submittedNumbers} ${currentFunction.id} ${currentNumber}%`;
         console.log((1 / Number(currentNumber)));
         submittedNumbers = currentNumber;
         currentNumber = answer;
-    }*/
+    }
     calculationWindow.innerText = currentCalculation;
-    answerWindow.innerText = answer;    
+    answerWindow.innerText = answer;
 };
 
 /* SETTING THE CLEAR ACTION*/

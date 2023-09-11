@@ -93,7 +93,8 @@ h1 {
     background-color: white;
 }
 
-.function-btn {
+.function-btn,
+.brackets-btn {
     background-color: rgba(143, 182, 179, 0.3);
 }
 

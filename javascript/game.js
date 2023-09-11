@@ -5,6 +5,7 @@ const answerWindow = document.getElementById('answer');
 const acceptedAnswers = document.getElementById('accepted-answers');
 const submitButton = document.getElementById('submit-btn');
 const clearButton = document.getElementById('clear-btn');
+const quitButton = document.getElementById('quit-btn');
 const timer = document.getElementById('timer');
 const score = document.getElementById('score-view');
 const answerDefinition = document.getElementById('answer-definition');
@@ -217,6 +218,16 @@ saveScores = () =>{
     localStorage.setItem('wordCount', submittedAnswers.length);
 }
 
+forfeitGameButton = () => {
+    quitButton.addEventListener("click", e => { 
+        const response = confirm('Are you sure you want to quit? Your progress will be lost');
+
+        if(response){
+            window.location.assign('boggle.html');
+        }
+    });
+}
+forfeitGameButton();
 
 countDown();
 submitAnswer();
