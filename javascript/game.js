@@ -20,7 +20,7 @@ const tenPoints = ['Q', 'Z'];
 
 let selectedWord = '';
 let submittedAnswers = [];
-let timeRemaining = 120;
+let timeRemaining = 180;
 let wordDefinition = [];
 let wordScore = 0;
 let totalScore = 0;
@@ -123,9 +123,10 @@ validateWord = () => {
         if(data.title === 'No Definitions Found'){
             notAWord();
         }
+        else if(selectedWord.length < 3){
+            notLongEnough();
+        } 
         else if(submittedAnswers.includes(selectedWord)){
-            console.log(submittedAnswers);
-            console.log(selectedWord);
             alreadyUsedWord();
         } 
         else{
@@ -148,6 +149,14 @@ validateWord = () => {
 notAWord = () =>{
     answerWindow.classList.add('wrong-answer')
     answerWindow.innerText = 'Not A Word!!';
+    setTimeout( () => {
+        clearAnswer();
+    }, 200);
+}
+
+notLongEnough = () =>{
+    answerWindow.classList.add('wrong-answer')
+    answerWindow.innerText = '3 Letters or More!!';
     setTimeout( () => {
         clearAnswer();
     }, 200);
@@ -227,8 +236,8 @@ forfeitGameButton = () => {
         }
     });
 }
-forfeitGameButton();
 
+forfeitGameButton();
 countDown();
 submitAnswer();
 

@@ -1,18 +1,24 @@
 const newGameBtn = document.getElementById('play-boggle');
-const scoreboardBtn = document.getElementById('use-calculator');
+const calculatorBtn = document.getElementById('use-calculator');
+const quizBtn = document.getElementById('play-quiz');
 
 playBoggle = () => {
     newGameBtn.addEventListener("click", e => {
-        console.log(e); 
         window.location.assign('boggle.html');
     });
 }
+playBoggle();
 
 useCalculator = () => {
-    scoreboardBtn.addEventListener("click", e => { 
+    calculatorBtn.addEventListener("click", e => { 
         window.location.assign('calculator.html');
     });
 }
-
-playBoggle();
 useCalculator();
+
+playQuiz = () => {
+    quizBtn.addEventListener("click", e => { 
+        window.location.assign('quiz.html');
+    });
+}
+playQuiz();
